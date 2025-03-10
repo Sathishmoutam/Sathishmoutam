@@ -1,0 +1,353 @@
+{
+  "name" : "tf_T_RECORD_REQUESTS-04_Feb_2025",
+  "sourceOrgId" : "3kWK7zb09rxhftwgbgOkEW",
+  "sourceOrgName" : "DCF-DWH-DEV",
+  "exportedObjects" : [ {
+    "objectGuid" : "1qqOUGbDUbCioGYOZpy1wX",
+    "objectName" : "DESKTOP-PTharun",
+    "objectType" : "AgentGroup",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVHB2500000000000E"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "e84jIGJjcg5gaWi7qSDkqY",
+    "objectName" : "FlatFile_Connection",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVHB0B00000000000J"
+      },
+      "objectRefs" : [ "7gFGBqpiYzdg4jemsZ3w2C" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "this connection is to create the parameter files in the particular folder",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "5SzwDo4C9oRcrp65mgfEyn",
+    "objectName" : "m_RAWDATA_MAPPING _BULK",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/DCF_DEV_PARAM/RAWDATA_PARAM",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVHB170000000000WU"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "5tJ19VTM800fa5H5H5mTuW",
+    "objectName" : "RAWDATA_SNOWFLAKE",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVHB0B00000000000E"
+      },
+      "objectRefs" : [ "3hBMLqd9OE6dAnXh46FhcX" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "this connection is only for Rawdata in snowflake",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "8iFLjmkAbYmcfao80WPVKy",
+    "objectName" : "m_AUDIT_LOG",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/DCF_DEV_PARAM/RAWDATA_PARAM",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVHB170000000000OP"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "ezPgZh87VA4eOYqDhJER4d",
+    "objectName" : "tf_T_RECORD_REQUESTS",
+    "objectType" : "TASKFLOW",
+    "path" : "/Explore/DCF_DEV_PARAM/RAWDATA_PARAM",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Ev18pNz6HKoJBUh-gt-6468670-2025-01-17T08:46:41.493Z::tf.xml"
+      },
+      "objectRefs" : [ "0p6BiFbGEtwkQlWsEzHQkN", "6SOd9EONBG7bavUbJXqbM4", "4BrFU8CGqG3hM9oHrU7l4l" ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "6SOd9EONBG7bavUbJXqbM4",
+    "objectName" : "mt_AUDIT_LOG",
+    "objectType" : "MTT",
+    "path" : "/Explore/DCF_DEV_PARAM/RAWDATA_PARAM",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVHB0Z0000000000JR"
+      },
+      "objectRefs" : [ "1qqOUGbDUbCioGYOZpy1wX", "8iFLjmkAbYmcfao80WPVKy", "5tJ19VTM800fa5H5H5mTuW" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "0p6BiFbGEtwkQlWsEzHQkN",
+    "objectName" : "mt_T_RECORD_REQUESTS",
+    "objectType" : "MTT",
+    "path" : "/Explore/DCF_DEV_PARAM/RAWDATA_PARAM",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVHB0Z00000000025E"
+      },
+      "objectRefs" : [ "5SzwDo4C9oRcrp65mgfEyn", "5tJ19VTM800fa5H5H5mTuW", "7gFGBqpiYzdg4jemsZ3w2C", "i0Z3ItZXVYRj4A6GqgS3c4" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "3hBMLqd9OE6dAnXh46FhcX",
+    "objectName" : "SWTEST",
+    "objectType" : "AgentGroup",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVHB25000000000005"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "hzLqJ227yQogb5THv6xYYC",
+    "objectName" : "DCF_DEV_PARAM",
+    "objectType" : "Project",
+    "path" : "/Explore",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "Parameterization implementation ",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "7gFGBqpiYzdg4jemsZ3w2C",
+    "objectName" : "DEFT-PTharun",
+    "objectType" : "AgentGroup",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVHB25000000000007"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "4BrFU8CGqG3hM9oHrU7l4l",
+    "objectName" : "mt_T_RECORD_REQUESTS_PARAM",
+    "objectType" : "MTT",
+    "path" : "/Explore/DCF_DEV_PARAM/RAWDATA_PARAM",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVHB0Z00000000025F"
+      },
+      "objectRefs" : [ "e84jIGJjcg5gaWi7qSDkqY", "5tJ19VTM800fa5H5H5mTuW", "7gFGBqpiYzdg4jemsZ3w2C", "7BvdmFdDF1QcsqpTqmfbMX" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "7BvdmFdDF1QcsqpTqmfbMX",
+    "objectName" : "m_RAWDATA_PARAMETER",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/DCF_DEV_PARAM/RAWDATA_PARAM",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVHB170000000000P4"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "this will create the parameter file for the RAWDATA mappingS",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "i0Z3ItZXVYRj4A6GqgS3c4",
+    "objectName" : "DCF_ORCL_SWTEST",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVHB0B000000000007"
+      },
+      "objectRefs" : [ "3hBMLqd9OE6dAnXh46FhcX" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Source_SWTEST",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "10HFNwa3oEtgvEUOCUAlqF",
+    "objectName" : "RAWDATA_PARAM",
+    "objectType" : "Folder",
+    "path" : "/Explore/DCF_DEV_PARAM",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  } ]
+}

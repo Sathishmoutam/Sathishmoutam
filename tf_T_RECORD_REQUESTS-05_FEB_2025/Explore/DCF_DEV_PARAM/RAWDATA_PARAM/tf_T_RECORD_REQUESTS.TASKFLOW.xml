@@ -1,0 +1,622 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Ev18pNz6HKoJBUh-gt-6468670-2025-01-17T08:46:41.493Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_T_RECORD_REQUESTS</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>ptharun@defteam.com</types1:CreatedBy>
+      <types1:CreationDate>2025-01-17T08:46:41Z</types1:CreationDate>
+      <types1:ModifiedBy>ptharun@defteam.com</types1:ModifiedBy>
+      <types1:ModificationDate>2025-01-17T09:17:07Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>ptharun@defteam.com</types1:PublishedBy>
+      <types1:PublicationDate>2025-01-20T11:59:45Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.tf_T_RECORD_REQUESTS/tf_T_RECORD_REQUESTS.tf.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="tf_T_RECORD_REQUESTS"
+                   name="tf_T_RECORD_REQUESTS"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description="" name="COUNT_DICT" type="int">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">1</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="mt_T_RECORD_REQUESTS_PARAM" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-T-RECORD-REQUESTS-PARAM-4BrFU8CGqG3hM9oHrU7l4l</option>
+                  </options>
+               </field>
+               <field description="" name="mt_T_RECORD_REQUESTS" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-T-RECORD-REQUESTS-0p6BiFbGEtwkQlWsEzHQkN</option>
+                  </options>
+               </field>
+               <field description="" name="mt_AUDIT_LOG_SUCCESS" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4</option>
+                  </options>
+               </field>
+               <field description="" name="mt_AUDIT_LOG_FAILURE" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">false</nvpair>
+            </extData>
+            <flow id="a">
+               <start id="b">
+                  <link id="lysff8rj" targetId="lysff8s9"/>
+               </start>
+               <eventContainer id="lysff8s9">
+                  <service id="lysff8ri">
+                     <title>mt_T_RECORD_REQUESTS_PARAM</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_T_RECORD_REQUESTS_PARAM</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">4BrFU8CGqG3hM9oHrU7l4l</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-T-RECORD-REQUESTS-PARAM-4BrFU8CGqG3hM9oHrU7l4l">temp.mt_T_RECORD_REQUESTS_PARAM</operation>
+                           <operation source="constant"
+                                      to="mt-T-RECORD-REQUESTS-PARAM-4BrFU8CGqG3hM9oHrU7l4l/taskProperties[1]/parameterFileDir">D:\DCF\PARAMETER\</operation>
+                           <operation source="constant"
+                                      to="mt-T-RECORD-REQUESTS-PARAM-4BrFU8CGqG3hM9oHrU7l4l/taskProperties[1]/parameterFileName">mt_PARAM_FILE.param</operation>
+                           <operation source="constant"
+                                      to="temp.mt_T_RECORD_REQUESTS_PARAM[1]/taskProperties[1]/parameterFileDir">D:\DCF\PARAMETER\</operation>
+                           <operation source="constant"
+                                      to="temp.mt_T_RECORD_REQUESTS_PARAM[1]/taskProperties[1]/parameterFileName">mt_PARAM_FILE.param</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS_PARAM/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS_PARAM/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS_PARAM/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS_PARAM/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS_PARAM/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.mt_T_RECORD_REQUESTS_PARAM/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_T_RECORD_REQUESTS_PARAM/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_T_RECORD_REQUESTS_PARAM/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_T_RECORD_REQUESTS_PARAM/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS_PARAM/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS_PARAM/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.mt_T_RECORD_REQUESTS_PARAM/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.mt_T_RECORD_REQUESTS_PARAM/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field"
+                                   to="temp.mt_T_RECORD_REQUESTS_PARAM/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS_PARAM/inout/O_Email">O_Email</operation>
+                        <operation source="field"
+                                   to="temp.mt_T_RECORD_REQUESTS_PARAM/inout/IntegrationRunTimeName">IntegrationRunTimeName</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="lysff8up" targetId="lysff8uu"/>
+                  <events>
+                     <catch faultField="temp.mt_T_RECORD_REQUESTS_PARAM/fault"
+                            id="lysff8s7"
+                            interrupting="true"
+                            name="error"/>
+                     <catch faultField="temp.mt_T_RECORD_REQUESTS_PARAM/fault"
+                            id="lysff8s8"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="lysff8uu">
+                  <service id="lysff8uo">
+                     <title>mt_T_RECORD_REQUESTS</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_T_RECORD_REQUESTS</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">0p6BiFbGEtwkQlWsEzHQkN</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-T-RECORD-REQUESTS-0p6BiFbGEtwkQlWsEzHQkN">temp.mt_T_RECORD_REQUESTS</operation>
+                           <operation source="constant"
+                                      to="mt-T-RECORD-REQUESTS-0p6BiFbGEtwkQlWsEzHQkN/taskProperties[1]/parameterFileDir">D:\DCF\PARAMETER\mt_PARAMETERS\</operation>
+                           <operation source="constant"
+                                      to="mt-T-RECORD-REQUESTS-0p6BiFbGEtwkQlWsEzHQkN/taskProperties[1]/parameterFileName">mt_T_RECORD_REQUESTS.param</operation>
+                           <operation source="constant"
+                                      to="temp.mt_T_RECORD_REQUESTS[1]/taskProperties[1]/parameterFileDir">D:\DCF\PARAMETER\mt_PARAMETERS\</operation>
+                           <operation source="constant"
+                                      to="temp.mt_T_RECORD_REQUESTS[1]/taskProperties[1]/parameterFileName">mt_T_RECORD_REQUESTS.param</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.mt_T_RECORD_REQUESTS/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.mt_T_RECORD_REQUESTS/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.mt_T_RECORD_REQUESTS/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="lysff8x2" targetId="lysff8x1"/>
+                  <events>
+                     <catch faultField="temp.mt_T_RECORD_REQUESTS/fault"
+                            id="lysff8us"
+                            interrupting="true"
+                            name="error"/>
+                     <catch faultField="temp.mt_T_RECORD_REQUESTS/fault"
+                            id="lysff8ut"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <container id="lysff8x1" type="exclusive">
+                  <title>TaskStatus</title>
+                  <flow id="lysff8x5">
+                     <service id="lysff8xq">
+                        <title>SuccessNotification</title>
+                        <serviceName>emailNotificationService</serviceName>
+                        <serviceGUID/>
+                        <serviceInput>
+                           <parameter name="Email To" source="constant">{$temp.mt_T_RECORD_REQUESTS_PARAM[1]/inout[1]/O_Email}</parameter>
+                           <parameter name="Email Cc" source="constant"/>
+                           <parameter name="Email Bcc" source="constant"/>
+                           <parameter name="Email Subject" source="formula">
+                              <expression language="XQuery">util:getOrganizationName()||' : '||$temp.mt_T_RECORD_REQUESTS_PARAM[1]/inout[1]/IntegrationRunTimeName    ||' : '||$temp.mt_T_RECORD_REQUESTS[1]/output[1]/Object_Name ||' Status'</expression>
+                           </parameter>
+                           <parameter name="Email Content Type" source="constant">html</parameter>
+                           <parameter name="Email Body" source="constant"> &lt;p&gt;The Mapping task &lt;strong&gt;mt_T_RECORD_REQUESTS &lt;/strong&gt;is completed successfully.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;Thanks,&lt;br&gt;Informatica development team.&lt;/p&gt; </parameter>
+                        </serviceInput>
+                        <serviceOutput/>
+                        <link id="lysff96i" targetId="lysff90j"/>
+                     </service>
+                     <eventContainer id="lysff90j">
+                        <service id="lysff8zf">
+                           <title>mt_AUDIT_LOG_SUCCESS</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mt_AUDIT_LOG</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">6SOd9EONBG7bavUbJXqbM4</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4">temp.mt_AUDIT_LOG_SUCCESS</operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/END_TIME">
+                                    <expression language="XQuery">fn:concat(substring($temp.mt_T_RECORD_REQUESTS[1]/output[1]/End_Time , 1, 10), ' ',substring($temp.mt_T_RECORD_REQUESTS[1]/output[1]/End_Time , 12, 8))</expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/ERROR_MSG">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/output[1]/Error_Message </expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/FAILED_SRC_ROWS">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/output[1]/Failed_Source_Rows </expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/FAILED_TGT_ROWS">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/output[1]/Failed_Target_Rows </expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/RUN_ID">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/output[1]/Run_Id </expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/START_TIME">
+                                    <expression language="XQuery">fn:concat(substring($temp.mt_T_RECORD_REQUESTS[1]/output[1]/Start_Time , 1, 10), ' ',substring($temp.mt_T_RECORD_REQUESTS[1]/output[1]/Start_Time , 12, 8))</expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/SUCCESS_SRC_ROWS">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/output[1]/Success_Source_Rows </expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/SUCCESS_TGT_ROWS">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/output[1]/Success_Target_Rows </expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/TASK_NAME">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/output[1]/Object_Name </expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/TASK_STATUS">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/output[1]/Task_Status </expression>
+                                 </operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.mt_AUDIT_LOG_SUCCESS/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.mt_AUDIT_LOG_SUCCESS/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/FirstErrorCode">First Error Code</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/RUN_ID">RUN_ID</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/TASK_NAME">TASK_NAME</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/TASK_STATUS">TASK_STATUS</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/SUCCESS_SRC_ROWS">SUCCESS_SRC_ROWS</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/FAILED_SRC_ROWS">FAILED_SRC_ROWS</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/SUCCESS_TGT_ROWS">SUCCESS_TGT_ROWS</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/FAILED_TGT_ROWS">FAILED_TGT_ROWS</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/START_TIME">START_TIME</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/END_TIME">END_TIME</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/ERROR_MSG">ERROR_MSG</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/Email">Email</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.mt_AUDIT_LOG_SUCCESS/fault"
+                                  id="lysff90h"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.mt_AUDIT_LOG_SUCCESS/fault"
+                                  id="lysff90i"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lysff8x6" targetId="lysff8x1" type="containerLink"/>
+                  </flow>
+                  <flow id="lysff8x8">
+                     <assignment id="lz72ehmz">
+                        <title>Assignment 1</title>
+                        <operation source="formula" to="output.COUNT_DICT">
+                           <expression language="XQuery">$output.COUNT_DICT +1</expression>
+                        </operation>
+                        <link id="lz72ehn0" targetId="lysff8yy"/>
+                     </assignment>
+                     <service id="lysff8yy">
+                        <title>FailureNotification</title>
+                        <serviceName>emailNotificationService</serviceName>
+                        <serviceGUID/>
+                        <serviceInput>
+                           <parameter name="Email To" source="constant">{$temp.mt_T_RECORD_REQUESTS_PARAM[1]/inout[1]/O_Email}</parameter>
+                           <parameter name="Email Cc" source="constant"/>
+                           <parameter name="Email Bcc" source="constant"/>
+                           <parameter name="Email Subject" source="formula">
+                              <expression language="XQuery">util:getOrganizationName()||' : '||$temp.mt_T_RECORD_REQUESTS_PARAM[1]/inout[1]/IntegrationRunTimeName     ||' : '||$temp.mt_T_RECORD_REQUESTS[1]/fault[1]/detail[1]/errOutputDetail[1]/Object_Name ||' Status'</expression>
+                           </parameter>
+                           <parameter name="Email Content Type" source="constant">html</parameter>
+                           <parameter name="Email Body" source="constant"> &lt;p&gt;The Mapping task&amp;nbsp; &lt;strong&gt;mt_T_RECORD_REQUESTS &lt;/strong&gt;is failed.&lt;/p&gt;
+&lt;p&gt;{$temp.mt_T_RECORD_REQUESTS[1]/fault[1]/code}&lt;/p&gt;
+&lt;p&gt;{$temp.mt_T_RECORD_REQUESTS[1]/fault[1]/reason}&lt;/p&gt;
+&lt;p&gt;{$temp.mt_T_RECORD_REQUESTS[1]/fault[1]/detail}&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Thanks,&lt;br&gt;Informatica development team.&lt;/p&gt; </parameter>
+                        </serviceInput>
+                        <serviceOutput/>
+                        <link id="lz72ehng" targetId="lz72ehnf"/>
+                     </service>
+                     <container id="lz72ehnf" type="exclusive">
+                        <title>Decision 1</title>
+                        <flow id="lz72ehnj">
+                           <wait id="lz72eho8">
+                              <title>Wait 1</title>
+                              <duration source="formula">
+                                 <function name="duration_expression">
+                                    <arg name="value">1</arg>
+                                    <arg name="scale">M</arg>
+                                    <arg name="businessDays"/>
+                                 </function>
+                              </duration>
+                              <link id="lz72ehoh" targetId="lz72ehof"/>
+                           </wait>
+                           <jumpTo id="lz72ehof">
+                              <link id="lz72ehog" targetId="lysff8uu"/>
+                           </jumpTo>
+                        </flow>
+                        <flow id="lz72ehnm">
+                           <link id="lz72ehnn" targetId="lz72ehnf" type="containerLink"/>
+                        </flow>
+                        <link id="lz72ehni" targetId="lz72ehnj" type="containerLink">
+                           <condition source="formula">
+                              <function name="less-than">
+                                 <arg name="left">{$output.COUNT_DICT}</arg>
+                                 <arg name="right">{3}</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="lz72ehnl" targetId="lz72ehnm" type="containerLink"/>
+                        <link id="lz72ehnh" targetId="lysff98f"/>
+                     </container>
+                     <eventContainer id="lysff98f">
+                        <service id="lysff97g">
+                           <title>mt_AUDIT_LOG_FAILURE</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mt_AUDIT_LOG</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">6SOd9EONBG7bavUbJXqbM4</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4">temp.mt_AUDIT_LOG_SUCCESS</operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/END_TIME">
+                                    <expression language="XQuery">fn:concat(substring($temp.mt_T_RECORD_REQUESTS[1]/fault[1]/detail[1]/errOutputDetail[1]/End_Time  , 1, 10), ' ',substring($temp.mt_T_RECORD_REQUESTS[1]/fault[1]/detail[1]/errOutputDetail[1]/End_Time  , 12, 8))</expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/ERROR_MSG">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/fault[1]/detail[1]/errOutputDetail[1]/Error_Message </expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/FAILED_SRC_ROWS">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/fault[1]/detail[1]/errOutputDetail[1]/Failed_Target_Rows </expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/FAILED_TGT_ROWS">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/output[1]/Failed_Target_Rows </expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/RUN_ID">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/fault[1]/detail[1]/errOutputDetail[1]/Run_Id </expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/START_TIME">
+                                    <expression language="XQuery">fn:concat(substring($temp.mt_T_RECORD_REQUESTS[1]/fault[1]/detail[1]/errOutputDetail[1]/Start_Time  , 1, 10), ' ',substring($temp.mt_T_RECORD_REQUESTS[1]/fault[1]/detail[1]/errOutputDetail[1]/Start_Time , 12, 8))</expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/SUCCESS_SRC_ROWS">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/fault[1]/detail[1]/errOutputDetail[1]/Success_Source_Rows </expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/SUCCESS_TGT_ROWS">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/fault[1]/detail[1]/errOutputDetail[1]/Success_Target_Rows </expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/TASK_NAME">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/fault[1]/detail[1]/errOutputDetail[1]/Object_Name</expression>
+                                 </operation>
+                                 <operation source="formula"
+                                            to="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4/inout[1]/TASK_STATUS">
+                                    <expression language="XQuery">$temp.mt_T_RECORD_REQUESTS[1]/fault[1]/detail[1]/errOutputDetail[1]/Task_Status  </expression>
+                                 </operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.mt_AUDIT_LOG_SUCCESS/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.mt_AUDIT_LOG_SUCCESS/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/output/FirstErrorCode">First Error Code</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/RUN_ID">RUN_ID</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/TASK_NAME">TASK_NAME</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/TASK_STATUS">TASK_STATUS</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/SUCCESS_SRC_ROWS">SUCCESS_SRC_ROWS</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/FAILED_SRC_ROWS">FAILED_SRC_ROWS</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/SUCCESS_TGT_ROWS">SUCCESS_TGT_ROWS</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/FAILED_TGT_ROWS">FAILED_TGT_ROWS</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/START_TIME">START_TIME</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/END_TIME">END_TIME</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/ERROR_MSG">ERROR_MSG</operation>
+                              <operation source="field" to="temp.mt_AUDIT_LOG_SUCCESS/inout/Email">Email</operation>
+                           </serviceOutput>
+                        </service>
+                        <link id="lz72ehor" targetId="lz72ehoq"/>
+                        <events>
+                           <catch faultField="temp.mt_AUDIT_LOG_FAILURE/fault"
+                                  id="lysff90h"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.mt_AUDIT_LOG_FAILURE/fault"
+                                  id="lysff90i"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <end id="lz72ehoq">
+                        <title>End 1</title>
+                     </end>
+                  </flow>
+                  <link id="lysff8x4" targetId="lysff8x5" type="containerLink">
+                     <condition source="formula">
+                        <function name="contains">
+                           <arg name="left">{$temp.mt_T_RECORD_REQUESTS[1]/output[1]/Task_Status}</arg>
+                           <arg name="right">1</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="lysff8x7" targetId="lysff8x8" type="containerLink"/>
+                  <link id="lysff8x3" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-T-RECORD-REQUESTS-PARAM-4BrFU8CGqG3hM9oHrU7l4l"
+                              isByCopy="true"
+                              name="mt-T-RECORD-REQUESTS-PARAM-4BrFU8CGqG3hM9oHrU7l4l">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-T-RECORD-REQUESTS-0p6BiFbGEtwkQlWsEzHQkN"
+                              isByCopy="true"
+                              name="mt-T-RECORD-REQUESTS-0p6BiFbGEtwkQlWsEzHQkN">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4"
+                              isByCopy="true"
+                              name="mt-AUDIT-LOG-6SOd9EONBG7bavUbJXqbM4">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters"
+                            name="input"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>ezPgZh87VA4eOYqDhJER4d</types1:GUID>
+      <types1:DisplayName>tf_T_RECORD_REQUESTS</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-02-05T06:43:45.274Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
