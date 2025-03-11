@@ -3,7 +3,7 @@
 *
 * GITHUB File Name : SF_GET_CASE_WORKER_ID.sql
 *
-* Version :        1.1
+* Version :        2.0
 *
 * Details: <Short description about the table>
 *
@@ -12,7 +12,7 @@
 *  Name               Ver     Date      JIRA Ticket      Comment
 *  ------------------ ---    --------   ------------- --------------------
 *
-*  Tharun            1.0    02/25/25                    Initial
+*  sathish            2.0    02/25/25                    Initial
 /**********************************************************************/
 
 
