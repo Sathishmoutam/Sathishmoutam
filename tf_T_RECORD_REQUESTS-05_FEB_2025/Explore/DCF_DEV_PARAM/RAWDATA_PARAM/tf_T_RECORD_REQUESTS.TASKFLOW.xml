@@ -4,7 +4,9 @@
       <types1:EntryId>Ev18pNz6HKoJBUh-gt-6468670-2025-01-17T08:46:41.493Z::tf.xml</types1:EntryId>
       <types1:Name>tf_T_RECORD_REQUESTS</types1:Name>
       <types1:MimeType>application/xml+taskflow</types1:MimeType>
-      <types1:Description/>
+      <types1:Description>This taskflow will upload the data from oracle to snowflake.
+
+---created by Tharun, created on 17-Mar-25---</types1:Description>
       <types1:AppliesTo/>
       <types1:Tags/>
       <types1:VersionLabel>1.0</types1:VersionLabel>
@@ -13,10 +15,10 @@
       <types1:CreatedBy>ptharun@defteam.com</types1:CreatedBy>
       <types1:CreationDate>2025-01-17T08:46:41Z</types1:CreationDate>
       <types1:ModifiedBy>ptharun@defteam.com</types1:ModifiedBy>
-      <types1:ModificationDate>2025-01-17T09:17:07Z</types1:ModificationDate>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:ModificationDate>2025-03-17T07:40:36Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
       <types1:PublishedBy>ptharun@defteam.com</types1:PublishedBy>
-      <types1:PublicationDate>2025-01-20T11:59:45Z</types1:PublicationDate>
+      <types1:PublicationDate>2025-02-26T10:28:37Z</types1:PublicationDate>
       <types1:PublishedContributionId>project:/tf.tf_T_RECORD_REQUESTS/tf_T_RECORD_REQUESTS.tf.xml</types1:PublishedContributionId>
       <types1:Entry>
          <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
@@ -27,7 +29,9 @@
                    overrideAPIName="false">
             <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
             <appliesTo/>
-            <description/>
+            <description>This taskflow will upload the data from oracle to snowflake.
+
+---created by Tharun, created on 17-Mar-25---</description>
             <tags/>
             <generator>Informatica Process Designer 11</generator>
             <output>
@@ -95,13 +99,13 @@
                         <parameter name="taskField" source="nested">
                            <operation source="field" to="mt-T-RECORD-REQUESTS-PARAM-4BrFU8CGqG3hM9oHrU7l4l">temp.mt_T_RECORD_REQUESTS_PARAM</operation>
                            <operation source="constant"
-                                      to="mt-T-RECORD-REQUESTS-PARAM-4BrFU8CGqG3hM9oHrU7l4l/taskProperties[1]/parameterFileDir">D:\DCF\PARAMETER\</operation>
+                                      to="mt-T-RECORD-REQUESTS-PARAM-4BrFU8CGqG3hM9oHrU7l4l/taskProperties[1]/parameterFileDir">$PMRootDir/DCF_DWH_PARAMETER/</operation>
                            <operation source="constant"
-                                      to="mt-T-RECORD-REQUESTS-PARAM-4BrFU8CGqG3hM9oHrU7l4l/taskProperties[1]/parameterFileName">mt_PARAM_FILE.param</operation>
+                                      to="mt-T-RECORD-REQUESTS-PARAM-4BrFU8CGqG3hM9oHrU7l4l/taskProperties[1]/parameterFileName">mt_RAWDATA_PARAM_FILE.param</operation>
                            <operation source="constant"
-                                      to="temp.mt_T_RECORD_REQUESTS_PARAM[1]/taskProperties[1]/parameterFileDir">D:\DCF\PARAMETER\</operation>
+                                      to="temp.mt_T_RECORD_REQUESTS_PARAM[1]/taskProperties[1]/parameterFileDir">$PMRootDir/DCF_DWH_PARAMETER/</operation>
                            <operation source="constant"
-                                      to="temp.mt_T_RECORD_REQUESTS_PARAM[1]/taskProperties[1]/parameterFileName">mt_PARAM_FILE.param</operation>
+                                      to="temp.mt_T_RECORD_REQUESTS_PARAM[1]/taskProperties[1]/parameterFileName">mt_RAWDATA_PARAM_FILE.param</operation>
                         </parameter>
                      </serviceInput>
                      <serviceOutput>
@@ -158,11 +162,11 @@
                         <parameter name="taskField" source="nested">
                            <operation source="field" to="mt-T-RECORD-REQUESTS-0p6BiFbGEtwkQlWsEzHQkN">temp.mt_T_RECORD_REQUESTS</operation>
                            <operation source="constant"
-                                      to="mt-T-RECORD-REQUESTS-0p6BiFbGEtwkQlWsEzHQkN/taskProperties[1]/parameterFileDir">D:\DCF\PARAMETER\mt_PARAMETERS\</operation>
+                                      to="mt-T-RECORD-REQUESTS-0p6BiFbGEtwkQlWsEzHQkN/taskProperties[1]/parameterFileDir">$PMRootDir/DCF_DWH_PARAMETER/mt_PARAMETERS/</operation>
                            <operation source="constant"
                                       to="mt-T-RECORD-REQUESTS-0p6BiFbGEtwkQlWsEzHQkN/taskProperties[1]/parameterFileName">mt_T_RECORD_REQUESTS.param</operation>
                            <operation source="constant"
-                                      to="temp.mt_T_RECORD_REQUESTS[1]/taskProperties[1]/parameterFileDir">D:\DCF\PARAMETER\mt_PARAMETERS\</operation>
+                                      to="temp.mt_T_RECORD_REQUESTS[1]/taskProperties[1]/parameterFileDir">$PMRootDir/DCF_DWH_PARAMETER/mt_PARAMETERS/</operation>
                            <operation source="constant"
                                       to="temp.mt_T_RECORD_REQUESTS[1]/taskProperties[1]/parameterFileName">mt_T_RECORD_REQUESTS.param</operation>
                         </parameter>
@@ -618,5 +622,5 @@
       <types1:GUID>ezPgZh87VA4eOYqDhJER4d</types1:GUID>
       <types1:DisplayName>tf_T_RECORD_REQUESTS</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2025-02-05T06:43:45.274Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2025-03-17T07:42:22.734Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>
