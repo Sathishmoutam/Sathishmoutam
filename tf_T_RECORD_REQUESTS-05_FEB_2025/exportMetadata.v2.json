@@ -45,7 +45,7 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "this connection is to create the parameter files in the particular folder",
+        "description" : "",
         "contentType" : "JSON",
         "documentState" : "COMPLETE"
       }
@@ -93,7 +93,7 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "this connection is only for Rawdata in snowflake",
+        "description" : "",
         "contentType" : "JSON",
         "documentState" : "COMPLETE"
       }
@@ -301,7 +301,7 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "this will create the parameter file for the RAWDATA mappingS",
+ 
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
